@@ -1,0 +1,74 @@
+@import '../constants';
+
+// borders 1px solid
+.border {
+  &-none {
+    border: none !important;
+  }
+
+  &-white {
+    border: 1px solid white !important;
+    border-radius: 2px !important;
+  }
+
+  &-black {
+    border: 1px solid black !important;
+    border-radius: 2px !important;
+  }
+
+  &-grey {
+    border: 1px solid #f3f6f8 !important;
+    border-radius: 2px !important;
+
+    &-darker {
+      border: 1px solid rgb(192, 192, 192) !important;
+      border-radius: 2px !important;
+    }
+
+    &-darker-2 {
+      border: 1px solid rgb(145, 145, 145) !important;
+      border-radius: 2px !important;
+    }
+
+    &-darker-3 {
+      border: 1px solid rgb(99, 99, 99) !important;
+      border-radius: 2px !important;
+    }
+
+    &-darker-4 {
+      border: 1px solid rgb(45, 45, 45) !important;
+      border-radius: 2px !important;
+    }
+
+    &-semantic {
+      border: 1px solid rgba(34, 36, 38, 0.15) !important;
+    }
+  }
+
+  &-green {
+    border: 1px solid rgb(94, 172, 110) !important;
+    border-radius: 2px;
+  }
+
+  &-hover {
+    &:hover {
+      border: 1px solid $c-main !important;
+      border-radius: 2px !important;
+    }
+  }
+
+  &-active {
+    border: 1px solid $c-main !important;
+    border-radius: 2px !important;
+  }
+
+  &-main {
+    border: 1px solid $c-main !important;
+    border-radius: 2px !important;
+
+    &-lighter {
+      border: 1px solid $c-main-lighter !important;
+      border-radius: 2px !important;
+    }
+  }
+}

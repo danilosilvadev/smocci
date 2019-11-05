@@ -1,0 +1,301 @@
+.f {
+  display: flex !important;
+}
+
+.b {
+  display: block !important;
+}
+
+.i {
+  display: inline !important;
+}
+
+.n {
+  display: none !important;
+}
+
+.f-row,
+.f-row-reverse,
+.f-column,
+.f-column-reverse {
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+
+.f-inline {
+  display: -ms-inline-flexbox !important;
+  display: -webkit-inline-flex !important;
+  display: inline-flex !important;
+}
+
+.f-row {
+  -ms-flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  flex-direction: row !important;
+}
+
+.f-row-reverse {
+  -ms-flex-direction: row-reverse !important;
+  -webkit-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
+}
+
+.f-column {
+  -ms-flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.f-column-reverse {
+  -ms-flex-direction: column-reverse !important;
+  -webkit-flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
+}
+
+.f-wrap {
+  -ms-flex-wrap: wrap !important;
+  -webkit-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+}
+
+.f-no-wrap {
+  -ms-flex-wrap: nowrap !important;
+  -webkit-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+}
+
+.f-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse !important;
+  -webkit-flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important;
+}
+
+.flex-auto {
+  -ms-flex: 1 1 auto !important;
+  -webkit-flex: 1 1 auto !important;
+  flex: 1 1 auto !important;
+}
+
+.flex-none {
+  -ms-flex: none !important;
+  -webkit-flex: none !important;
+  flex: none !important;
+}
+
+.flex,
+.flex-1 {
+  -ms-flex: 1 !important;
+  -webkit-flex: 1 !important;
+  flex: 1 !important;
+}
+
+.flex-2 {
+  -ms-flex: 2 !important;
+  -webkit-flex: 2 !important;
+  flex: 2 !important;
+}
+
+.flex-3 {
+  -ms-flex: 3 !important;
+  -webkit-flex: 3 !important;
+  flex: 3 !important;
+}
+
+.flex-4 {
+  -ms-flex: 4 !important;
+  -webkit-flex: 4 !important;
+  flex: 4 !important;
+}
+
+.flex-5 {
+  -ms-flex: 5 !important;
+  -webkit-flex: 5 !important;
+  flex: 5 !important;
+}
+
+.flex-6 {
+  -ms-flex: 6 !important;
+  -webkit-flex: 6 !important;
+  flex: 6 !important;
+}
+
+.flex-7 {
+  -ms-flex: 7 !important;
+  -webkit-flex: 7 !important;
+  flex: 7 !important;
+}
+
+.flex-8 {
+  -ms-flex: 8 !important;
+  -webkit-flex: 8 !important;
+  flex: 8 !important;
+}
+
+.flex-9 {
+  -ms-flex: 9 !important;
+  -webkit-flex: 9 !important;
+  flex: 9 !important;
+}
+
+.flex-10 {
+  -ms-flex: 10 !important;
+  -webkit-flex: 10 !important;
+  flex: 10 !important;
+}
+
+.flex-11 {
+  -ms-flex: 11 !important;
+  -webkit-flex: 11 !important;
+  flex: 11 !important;
+}
+
+.flex-12 {
+  -ms-flex: 12 !important;
+  -webkit-flex: 12 !important;
+  flex: 12 !important;
+}
+
+/* alignment in cross axis */
+.f-align-start {
+  -webkit-align-items: flex-start !important;
+  align-items: flex-start !important;
+  -ms-flex-align: start !important;
+}
+
+.f-centered,
+.f-align-center {
+  -webkit-align-items: center !important;
+  align-items: center !important;
+  -ms-flex-align: center !important;
+}
+
+.f-align-end {
+  -webkit-align-items: flex-end !important;
+  align-items: flex-end !important;
+  -ms-flex-align: end !important;
+}
+
+/* alignment in main axis */
+.f-justify-start {
+  -ms-flex-pack: start !important;
+  -webkit-justify-content: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+.f-justify-center,
+.f-centered {
+  -ms-flex-pack: center !important;
+  -webkit-justify-content: center !important;
+  justify-content: center !important;
+}
+
+.f-justify-end {
+  -ms-flex-pack: end !important;
+  -webkit-justify-content: flex-end !important;
+  justify-content: flex-end !important;
+}
+
+.f-justify-around {
+  -ms-flex-pack: around !important;
+  -webkit-justify-content: space-around !important;
+  justify-content: space-around !important;
+}
+
+.f-justify-between {
+  -ms-flex-pack: justify !important;
+  -webkit-justify-content: space-between !important;
+  justify-content: space-between !important;
+}
+
+/* self alignment */
+.self-start {
+  -ms-align-self: flex-start !important;
+  -webkit-align-self: flex-start !important;
+  align-self: flex-start !important;
+}
+
+.self-center {
+  -ms-align-self: center !important;
+  -webkit-align-self: center !important;
+  align-self: center !important;
+}
+
+.self-end {
+  -ms-align-self: flex-end !important;
+  -webkit-align-self: flex-end !important;
+  align-self: flex-end !important;
+}
+
+.self-stretch {
+  -ms-align-self: stretch !important;
+  -webkit-align-self: stretch !important;
+  align-self: stretch !important;
+}
+
+/*******************************
+          Other Layout
+*******************************/
+
+/* IE 10 support for HTML5 hidden attr */
+[hidden] {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.fit {
+  bottom: 0 !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+body.fullbleed {
+  height: 100vh !important;
+  margin: 0 !important;
+}
+
+.scroll {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* fixed position */
+.fixed-bottom,
+.fixed-left,
+.fixed-right,
+.fixed-top {
+  position: fixed !important;
+}
+
+.fixed-top {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.fixed-right {
+  bottom: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.fixed-bottom {
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.fixed-left {
+  bottom: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+}

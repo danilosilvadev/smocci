@@ -1,0 +1,15 @@
+.clear {
+  &-button {
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+
+  &-link {
+    text-decoration: none !important;
+  }
+
+  &-list {
+    list-style-type: none !important;
+  }
+}

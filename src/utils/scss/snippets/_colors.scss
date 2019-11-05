@@ -1,0 +1,114 @@
+@import '../constants';
+
+// Colors
+.c {
+  &-red {
+    color: red !important;
+  }
+
+  &-blue {
+    color: #5697fa !important;
+  }
+
+  &-yellow {
+    color: #daa520 !important;
+  }
+
+  &-white {
+    color: white !important;
+  }
+
+  &-orange {
+    color: #dc7b1c !important;
+  }
+
+  &-black {
+    color: black !important;
+  }
+
+  &-grey {
+    color: #f3f6f8 !important;
+
+    &-darker {
+      color: rgb(192, 192, 192) !important;
+    }
+
+    &-darker-2 {
+      color: rgb(145, 145, 145) !important;
+    }
+
+    &-darker-3 {
+      color: rgb(99, 99, 99) !important;
+    }
+
+    &-darker-4 {
+      color: rgb(45, 45, 45) !important;
+    }
+  }
+
+  &-green {
+    color: #69c776 !important;
+  }
+
+  &-hover {
+    &:hover {
+      color: $c-main !important;
+      background-color: #f3f6f8 !important;
+    }
+  }
+
+  &-active {
+    color: $c-main !important;
+    background-color: #f3f6f8 !important;
+  }
+
+  &-main {
+    color: $c-main !important;
+
+    &-lighter {
+      color: $c-main-lighter !important;
+    }
+  }
+
+  &-bg {
+    &-white {
+      background-color: white !important;
+    }
+
+    &-black {
+      background-color: black !important;
+    }
+
+    &-grey {
+      background-color: #f3f6f8 !important;
+
+      &-darker {
+        background-color: rgb(192, 192, 192) !important;
+      }
+
+      &-darker-2 {
+        background-color: rgb(145, 145, 145) !important;
+      }
+
+      &-darker-3 {
+        background-color: rgb(99, 99, 99) !important;
+      }
+
+      &-darker-4 {
+        background-color: rgb(45, 45, 45) !important;
+      }
+    }
+
+    &-blue {
+      background-color: #5697fa !important;
+    }
+
+    &-main-background {
+      background-color: $c-main-background !important;
+    }
+
+    &-main {
+      background-color: $c-main !important;
+    }
+  }
+}

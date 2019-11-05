@@ -1,0 +1,72 @@
+/* stylelint-disable */
+
+/*
+  This file generates margins and paddings helper classes according to
+  defined breakpoints.
+
+  I. e.:
+
+  .m-1 {
+    margin: 0.5rem !important;
+  }
+
+  .m-bottom-4 {
+    margin-bottom: 2rem !important;
+  }
+
+  .p-7 {
+    padding: 3.5rem !important;
+  }
+
+  .p-top-7 {
+    padding-top: 3.5rem !important;
+  }
+
+  p-left-14 {
+  padding-left: 7rem !important;
+}
+
+*/
+
+@each $breakpoint,
+$value in ($grid-breakpoints) {
+  $spacing: 0.5;
+
+  @if ($value==0) {
+
+    @each $prop,
+    $abbrev in (margin: m, padding: p) {
+      @for $i from 0 through 16 {
+        .#{$abbrev}-#{$i} {
+          #{$prop}: #{$i * $spacing}rem !important;
+        }
+
+        @each $side in (top, bottom, left, right) {
+          .#{$abbrev}-#{$side}-#{$i} {
+            #{$prop}-#{$side}: #{$i * $spacing}rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  @else {
+    @media (min-width: $value) {
+
+      @each $prop,
+      $abbrev in (margin: m, padding: p) {
+        @for $i from 0 through 10 {
+          .#{$abbrev}-#{$breakpoint}-#{$i} {
+            #{$prop}: #{$i * $spacing}rem !important;
+          }
+
+          @each $side in (top, bottom, left, right) {
+            .#{$abbrev}-#{$side}-#{$breakpoint}-#{$i} {
+              #{$prop}-#{$side}: #{$i * $spacing}rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

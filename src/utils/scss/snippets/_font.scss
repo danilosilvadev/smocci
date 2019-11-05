@@ -1,0 +1,52 @@
+.font {
+  &-size {
+    &-0-5 {
+      font-size: 0.5rem !important;
+    }
+
+    &-0-8 {
+      font-size: 0.8rem !important;
+    }
+
+    &-1 {
+      font-size: 1rem !important;
+    }
+
+    &-1-5 {
+      font-size: 1.5rem !important;
+    }
+
+    &-2 {
+      font-size: 2rem !important;
+    }
+
+    &-2-5 {
+      font-size: 2.5rem !important;
+    }
+
+    &-3 {
+      font-size: 3rem !important;
+    }
+  }
+
+  &-weight {
+    &-1 {
+      font-weight: normal !important;
+    }
+
+    &-2 {
+      font-weight: bold !important;
+    }
+
+    &-3 {
+      font-weight: bolder !important;
+    }
+  }
+
+  &-wrap {
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+}
