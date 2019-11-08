@@ -1,0 +1,15 @@
+<section class="f m-top-4 f-justify-center">
+  <div class="f f-justify-center">
+    <div class="f f-column">
+      <h1 class="m-left-3 f-justify-start title">Em alta</h1>
+      <ul class='f f-wrap'>
+        <li *ngFor="let item of comicsList" class="m-3" key='item.id'>
+          <a [routerLink]="['/comic&id=',item.id]" preserveQueryParams preserveFragment>
+            <img [src]='item.image' width="200px" />
+            <h3 class="font-weight-2 m-top-1">{{item.name}}</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
