@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { comicItem } from "../../models/comicItem";
+import { RouterModule } from "@angular/router";
 
 @Component({
   selector: "app-comics-list",
@@ -12,7 +13,5 @@ export class ComicsListComponent implements OnInit {
   constructor() {}
   title = "json-file-read-angular";
 
-  ngOnInit() {
-    console.log(this.comicsList, "lista");
-  }
+  ngOnInit() {}
 }

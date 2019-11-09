@@ -1,0 +1,40 @@
+<section class="container m-top-3">
+  <ul class="f m-bottom-4">
+    <li class="m-right-6">
+      <div
+        class="thumb f f-align-center f-justify-center is-relative"
+        width="150px"
+        (mouseenter)="mouseEnter(1)"
+        (mouseleave)="mouseLeave()"
+      >
+        <div
+          [ngClass]="[isHovered === 1 ? 'thumb-overlay is-overlay' : '']"
+        ></div>
+        <button [ngClass]="[isHovered === 1 ? 'button' : 'is-invisible']">
+          Editar
+        </button>
+      </div>
+    </li>
+    <li class="m-right-6">
+      <div
+        class="thumb f f-align-center f-justify-center is-relative"
+        width="150px"
+        (mouseenter)="mouseEnter(2)"
+        (mouseleave)="mouseLeave()"
+      >
+        <div
+          [ngClass]="[isHovered === 2 ? 'thumb-overlay is-overlay' : '']"
+        ></div>
+        <button [ngClass]="[isHovered === 2 ? 'button' : 'is-invisible']">
+          Editar
+        </button>
+      </div>
+    </li>
+  </ul>
+  <button class="button" (click)="toggleCreateComic(target)">
+    Cadastrar novo quadrinho
+  </button>
+  <div [@slideInOut]="animationState" #target>
+    <app-create-comic></app-create-comic>
+  </div>
+</section>

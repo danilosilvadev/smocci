@@ -11,6 +11,9 @@ import { MenuComponent } from "../components/menu/menu.component";
 import { HomePageComponent } from "../pages/home-page/home-page.component";
 import { ComicsListComponent } from "../components/comics-list/comics-list.component";
 import { ComicPageComponent } from "../pages/comic-page/comic-page.component";
+import { PublishPageComponent } from "../pages/publish-page/publish-page.component";
+import { CreateComicComponent } from "../components/forms/create-comic/create-comic.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { ComicPageComponent } from "../pages/comic-page/comic-page.component";
     MenuComponent,
     HomePageComponent,
     ComicsListComponent,
-    ComicPageComponent
+    ComicPageComponent,
+    PublishPageComponent,
+    CreateComicComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +33,8 @@ import { ComicPageComponent } from "../pages/comic-page/comic-page.component";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

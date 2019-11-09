@@ -1,19 +1,29 @@
-<section
-  class="c-bg-main f f-align-center p-right-2 p-left-2 f-justify-between p-2"
->
-  <ul class="f c-white font-weight-2 m-left-2">
-    <li class="m-right-6">Ler</li>
-    <li>Publicar</li>
-  </ul>
-  <section class="f">
-    <form class="f">
-      <input class="input" type="text" />
-      <span class="icon has-text-info">
-        <i class="fas fa-info-circle"></i>
-      </span>
-    </form>
-    <button class="button c-bg-main c-white font-weight-2">
-      Login com google
-    </button>
+<div class="c-bg-main">
+  <section
+    class="f f-align-center container f-justify-between p-top-2 p-bottom-2"
+  >
+    <ul class="f c-white font-weight-2">
+      <li class="m-right-6">
+        <a [routerLink]="['/comics']" class="clear-link">
+          Ler
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/publish']" class="clear-link">
+          Publicar
+        </a>
+      </li>
+    </ul>
+    <section class="f">
+      <form class="f">
+        <input class="input" type="text" />
+        <span class="icon has-text-info">
+          <i class="fas fa-info-circle"></i>
+        </span>
+      </form>
+      <button class="button c-bg-main c-white font-weight-2">
+        Login com google
+      </button>
+    </section>
   </section>
-</section>
+</div>
