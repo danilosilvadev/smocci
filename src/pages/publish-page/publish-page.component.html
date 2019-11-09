@@ -1,31 +1,19 @@
 <section class="container m-top-3">
   <ul class="f m-bottom-4">
-    <li class="m-right-6">
+    <li class="m-right-6" *ngFor="let comic of comicsList" key="comic.id">
       <div
         class="thumb f f-align-center f-justify-center is-relative"
+        [ngStyle]="{ backgroundImage: 'url(' + comic.image + ')' }"
         width="150px"
-        (mouseenter)="mouseEnter(1)"
+        (mouseenter)="mouseEnter(comic.id)"
         (mouseleave)="mouseLeave()"
       >
         <div
-          [ngClass]="[isHovered === 1 ? 'thumb-overlay is-overlay' : '']"
+          [ngClass]="[isHovered === comic.id ? 'thumb-overlay is-overlay' : '']"
         ></div>
-        <button [ngClass]="[isHovered === 1 ? 'button' : 'is-invisible']">
-          Editar
-        </button>
-      </div>
-    </li>
-    <li class="m-right-6">
-      <div
-        class="thumb f f-align-center f-justify-center is-relative"
-        width="150px"
-        (mouseenter)="mouseEnter(2)"
-        (mouseleave)="mouseLeave()"
-      >
-        <div
-          [ngClass]="[isHovered === 2 ? 'thumb-overlay is-overlay' : '']"
-        ></div>
-        <button [ngClass]="[isHovered === 2 ? 'button' : 'is-invisible']">
+        <button
+          [ngClass]="[isHovered === comic.id ? 'button' : 'is-invisible']"
+        >
           Editar
         </button>
       </div>
@@ -35,6 +23,6 @@
     Cadastrar novo quadrinho
   </button>
   <div [@slideInOut]="animationState" #target>
-    <app-create-comic></app-create-comic>
+    <app-create-comic (newComicEvent)="addComic($event)"></app-create-comic>
   </div>
 </section>

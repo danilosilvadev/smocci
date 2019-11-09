@@ -1,58 +1,103 @@
-<section class="section">
+<form class="section" [formGroup]="createComicForm" (ngSubmit)="onSubmit()">
   <div class="field">
     <label class="label">Name</label>
     <div class="control">
-      <input class="input" type="text" placeholder="Text input" />
+      <input
+        class="input"
+        type="text"
+        placeholder="Text input"
+        formControlName="name"
+      />
+      <span
+        class="c-main"
+        *ngIf="
+          !createComicForm.get('name').valid &&
+          createComicForm.get('name').touched === true
+        "
+      >
+        Descrição precisa ter pelo menos 10 caracteres
+      </span>
     </div>
   </div>
 
+  <div class="file f f-column m-bottom-2">
+    <span class="label">Capa</span>
+    <label class="file-label">
+      <input
+        class="file-input"
+        type="file"
+        name="resume"
+        (change)="onFileSelected($event)"
+      />
+      <span class="file-cta">
+        <span class="file-label">
+          Escolha uma capa 540x340 px
+        </span>
+      </span>
+      <span class="file-name">
+        {{ fileName }}
+      </span>
+    </label>
+  </div>
+
   <div class="field">
-    <label class="label">Subject</label>
+    <label class="label">Categoria</label>
     <div class="control">
       <div class="select">
-        <select>
-          <option>Select dropdown</option>
-          <option>With options</option>
+        <select formControlName="category">
+          <option *ngFor="let option of comicTypes" [value]="option.name">
+            {{ option.name }}
+          </option>
         </select>
       </div>
     </div>
+    <span
+      class="c-main m-top-2"
+      *ngIf="
+        !createComicForm.get('category').valid &&
+        createComicForm.get('category').touched === true
+      "
+    >
+      Precisa escolher uma opção
+    </span>
   </div>
 
   <div class="field">
-    <label class="label">Message</label>
+    <label class="label">Descrição</label>
     <div class="control">
-      <textarea class="textarea" placeholder="Textarea"></textarea>
+      <textarea
+        class="textarea"
+        placeholder="Textarea"
+        formControlName="description"
+      ></textarea>
+      <span
+        class="c-main"
+        *ngIf="
+          !createComicForm.get('description').valid &&
+          createComicForm.get('description').touched === true
+        "
+      >
+        Descrição precisa ter pelo menos 10 caracteres
+      </span>
     </div>
   </div>
 
   <div class="field">
     <div class="control">
       <label class="checkbox">
-        <input type="checkbox" />
+        <input type="checkbox" formControlName="termCheckbox" />
         I agree to the <a href="#">terms and conditions</a>
-      </label>
-    </div>
-  </div>
-
-  <div class="field">
-    <div class="control">
-      <label class="radio">
-        <input type="radio" name="question" />
-        Yes
-      </label>
-      <label class="radio">
-        <input type="radio" name="question" />
-        No
       </label>
     </div>
   </div>
 
   <div class="field is-grouped">
     <div class="control">
-      <button class="button is-link">Criar</button>
-    </div>
-    <div class="control">
-      <button class="button is-link is-light">Cancel</button>
+      <input
+        type="submit"
+        class="button is-link"
+        [disabled]="!createComicForm.valid"
+      />
     </div>
   </div>
-</section>
+</form>

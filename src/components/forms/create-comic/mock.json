@@ -1,0 +1,17 @@
+[
+  {
+    "name": "História em quadrinhos",
+    "id": "1",
+    "selected": false
+  },
+  {
+    "name": "Mangá",
+    "id": "2",
+    "selected": false
+  },
+  {
+    "name": "Novela gráfica",
+    "id": "3",
+    "selected": false
+  }
+]

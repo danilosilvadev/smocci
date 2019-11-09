@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+input.ng-invalid.ng-touched {
+  border: 1px solid $c-main !important;
+}
+
+textarea.ng-invalid.ng-touched {
+  border: 1px solid $c-main !important;
+}
+
+select.ng-invalid.ng-touched {
+  border: 1px solid $c-main !important;
+}

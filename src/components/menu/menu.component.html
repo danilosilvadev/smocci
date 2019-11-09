@@ -21,6 +21,36 @@
           <i class="fas fa-info-circle"></i>
         </span>
       </form>
+      <section
+        [ngClass]="
+          activeDropdown === true
+            ? 'dropdown is-active m-right-2'
+            : 'dropdown m-right-2'
+        "
+      >
+        <div class="dropdown-trigger">
+          <button
+            class="button"
+            aria-haspopup="true"
+            aria-controls="dropdown-menu"
+            (click)="activeDropdown = !activeDropdown"
+          >
+            <span>Danilo</span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">
+              Profile
+            </a>
+
+            <hr class="dropdown-divider" />
+            <a href="#" class="dropdown-item">
+              Logout
+            </a>
+          </div>
+        </div>
+      </section>
       <button class="button c-bg-main c-white font-weight-2">
         Login com google
       </button>

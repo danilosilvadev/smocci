@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { Component, OnInit, Directive } from "@angular/core";
 import { SlideInOutAnimation } from "../../utils/animations/slide";
+import list from "./mock.json";
 
 @Component({
   selector: "app-publish-page",
@@ -10,8 +11,11 @@ import { SlideInOutAnimation } from "../../utils/animations/slide";
 export class PublishPageComponent implements OnInit {
   isHovered: number;
   animationState = "out";
+  comicsList: { image: string; id: string }[];
 
-  constructor() {}
+  constructor() {
+    this.comicsList = list;
+  }
 
   toggleCreateComic(el: HTMLElement) {
     el.scrollIntoView();
@@ -24,6 +28,11 @@ export class PublishPageComponent implements OnInit {
 
   mouseLeave() {
     this.isHovered = 0;
+  }
+
+  addComic($event) {
+    console.log($event, "ta chegando?");
+    this.comicsList = [...this.comicsList, $event];
   }
 
   ngOnInit() {}
