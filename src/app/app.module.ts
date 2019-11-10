@@ -6,14 +6,15 @@ import { CommonModule } from "@angular/common";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { LoginPageComponent } from "../pages/login-page/login-page.component";
-import { MenuComponent } from "../components/menu/menu.component";
-import { HomePageComponent } from "../pages/home-page/home-page.component";
-import { ComicsListComponent } from "../components/comics-list/comics-list.component";
-import { ComicPageComponent } from "../pages/comic-page/comic-page.component";
-import { PublishPageComponent } from "../pages/publish-page/publish-page.component";
-import { CreateComicComponent } from "../components/forms/create-comic/create-comic.component";
+import { LoginPageComponent } from "./pages/login-page/login-page.component";
+import { MenuComponent } from "./components/menu/menu.component";
+import { HomePageComponent } from "./pages/home-page/home-page.component";
+import { ComicsListComponent } from "./components/comics-list/comics-list.component";
+import { ComicPageComponent } from "./pages/comic-page/comic-page.component";
+import { PublishPageComponent } from "./pages/publish-page/publish-page.component";
+import { CreateComicComponent } from "./components/forms/create-comic/create-comic.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { OverlayHoverDirective } from "./utils/directives/overlayHover/overlay-hover.directive";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ComicsListComponent,
     ComicPageComponent,
     PublishPageComponent,
-    CreateComicComponent
+    CreateComicComponent,
+    OverlayHoverDirective
   ],
   imports: [
     CommonModule,

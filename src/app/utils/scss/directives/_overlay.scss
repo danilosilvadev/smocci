@@ -1,0 +1,14 @@
+.directive-overlay {
+  opacity: 0.7 !important;
+  transition: all linear 0.3s !important;
+  background-color: black !important;
+  cursor: pointer !important;
+}
+
+.directive-overlay-button {
+  opacity: 0;
+  z-index: 99999;
+  &__active {
+    opacity: 1;
+  }
+}

@@ -9,13 +9,10 @@
         (mouseleave)="mouseLeave()"
       >
         <div
-          [ngClass]="[isHovered === comic.id ? 'thumb-overlay is-overlay' : '']"
+          class="is-overlay"
+          [appOverlayHover]="handleEdit"
+          [overlayHoverId]="comic.id"
         ></div>
-        <button
-          [ngClass]="[isHovered === comic.id ? 'button' : 'is-invisible']"
-        >
-          Editar
-        </button>
       </div>
     </li>
   </ul>

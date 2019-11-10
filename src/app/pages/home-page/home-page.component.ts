@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { comicItem } from "src/models/comicItem";
+import { comicItem } from "../../models/comicItem";
 import list from "./mock.json";
 
 @Component({

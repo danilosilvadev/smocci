@@ -17,6 +17,10 @@ export class PublishPageComponent implements OnInit {
     this.comicsList = list;
   }
 
+  handleEdit(id) {
+    console.log(id, "aqui está o id");
+  }
+
   toggleCreateComic(el: HTMLElement) {
     el.scrollIntoView();
     this.animationState = this.animationState === "out" ? "in" : "out";
