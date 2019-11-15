@@ -35,7 +35,7 @@
             aria-controls="dropdown-menu"
             (click)="activeDropdown = !activeDropdown"
           >
-            <span>Danilo</span>
+            <span>{{ username }}</span>
           </button>
         </div>
         <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -51,7 +51,7 @@
           </div>
         </div>
       </section>
-      <button class="button c-bg-main c-white font-weight-2">
+      <button class="button c-bg-main c-white font-weight-2" #google>
         Login com google
       </button>
     </section>

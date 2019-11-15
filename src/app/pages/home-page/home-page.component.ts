@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { comicItem } from "../../models/comicItem";
+import { comicItem } from "../../models/comicItem.model";
 import list from "./mock.json";
 
 @Component({
@@ -11,6 +11,7 @@ export class HomePageComponent implements OnInit {
   constructor() {}
   title = "json-file-read-angular";
   public comicsList: comicItem[] = list;
+  username: string;
 
   ngOnInit() {}
 }

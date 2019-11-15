@@ -16,17 +16,18 @@ $br-50: 50%;
 $base-gutter: $num-08;
 
 $box-shadow-card-sm: 0 0 $num-04 0 rgba(0, 0, 0, 0.08),
-0 $num-02 $num-04 0 rgba(0, 0, 0, 0.16);
+  0 $num-02 $num-04 0 rgba(0, 0, 0, 0.16);
 $box-shadow-button-sm: 0 0 $num-04 0 rgba(0, 0, 0, 0.08),
-0 $num-02 $num-04 0 rgba(0, 0, 0, 0.16);
+  0 $num-02 $num-04 0 rgba(0, 0, 0, 0.16);
 
-$grid-breakpoints: (xs: 0,
+$grid-breakpoints: (
+  xs: 0,
   sm: 576px,
   md: 769px,
   lg: 992px,
-  xl: 1200px,
+  xl: 1200px
 ) !default;
 
-$c-main: #FF2F4F;
+$c-main: #ff2f4f;
 $c-main-lighter: #fff159;
 $c-main-background: #ebebeb;

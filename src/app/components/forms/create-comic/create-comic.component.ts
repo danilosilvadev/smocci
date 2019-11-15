@@ -20,7 +20,7 @@ export class CreateComicComponent implements OnInit {
   createComicForm: FormGroup;
   fileName = "Nome do arquivo";
 
-  @Output() newComicEvent = new EventEmitter<{ image: string; id: number }>();
+  @Output() newComicEvent = new EventEmitter<{ thumb: File; name: number }>();
 
   constructor() {
     this.comicTypes = list;
@@ -41,22 +41,26 @@ export class CreateComicComponent implements OnInit {
 
   onFileSelected(event) {
     this.fileName = event.target.files[0].name;
-    const reader = new FileReader();
     if (event.target.files && event.target.files.length) {
-      reader.readAsDataURL(event.target.files[0]);
+      let me = this;
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
       reader.onload = () => {
-        this.createComicForm.patchValue({
+        me.createComicForm.patchValue({
           cover: reader.result
         });
+      };
+      reader.onerror = error => {
+        console.error("Error: ", error);
       };
     }
   }
 
   onSubmit() {
-    console.log(this.createComicForm.get("cover").value, "new comic added");
     this.newComicEvent.emit({
-      image: this.createComicForm.get("cover").value,
-      id: Math.random()
+      thumb: this.createComicForm.get("cover").value,
+      name: this.createComicForm.get("name").value
     });
     this.createComicForm.reset();
     this.fileName = "Nome do arquivo";

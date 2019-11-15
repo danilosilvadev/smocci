@@ -1,0 +1,10 @@
+{
+  "/api/*": {
+    "context": ["/api"],
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" },
+    "target": "https://smocci-e7b30.firebaseio.com/"
+  }
+}

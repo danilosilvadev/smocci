@@ -1,18 +1,28 @@
 <section class="container m-top-3">
+  <app-modal
+    (toggleModal)="toggleModal($event)"
+    (deleteComic)="deleteComic($event)"
+    [comicId]="comicId"
+    [isModalActive]="isModalActive"
+  ></app-modal>
   <ul class="f m-bottom-4">
     <li class="m-right-6" *ngFor="let comic of comicsList" key="comic.id">
       <div
         class="thumb f f-align-center f-justify-center is-relative"
-        [ngStyle]="{ backgroundImage: 'url(' + comic.image + ')' }"
+        [ngStyle]="{ backgroundImage: 'url(' + comic.thumb + ')' }"
         width="150px"
         (mouseenter)="mouseEnter(comic.id)"
         (mouseleave)="mouseLeave()"
       >
         <div
-          class="is-overlay"
+          class="is-overlay f f-justify-center f-align-center"
           [appOverlayHover]="handleEdit"
           [overlayHoverId]="comic.id"
-        ></div>
+        >
+          <button class="button">
+            Editar
+          </button>
+        </div>
       </div>
     </li>
   </ul>

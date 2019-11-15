@@ -15,6 +15,11 @@ import { PublishPageComponent } from "./pages/publish-page/publish-page.componen
 import { CreateComicComponent } from "./components/forms/create-comic/create-comic.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { OverlayHoverDirective } from "./utils/directives/overlayHover/overlay-hover.directive";
+import { AngularFireModule } from "@angular/fire";
+import { environment } from "src/environments/environment";
+import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFireStorage } from "@angular/fire/storage";
+import { ModalComponent } from "./components/modal/modal.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +31,8 @@ import { OverlayHoverDirective } from "./utils/directives/overlayHover/overlay-h
     ComicPageComponent,
     PublishPageComponent,
     CreateComicComponent,
-    OverlayHoverDirective
+    OverlayHoverDirective,
+    ModalComponent
   ],
   imports: [
     CommonModule,
@@ -36,9 +42,10 @@ import { OverlayHoverDirective } from "./utils/directives/overlayHover/overlay-h
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [AngularFirestore, AngularFireStorage],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

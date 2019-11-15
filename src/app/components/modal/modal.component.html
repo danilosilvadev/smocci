@@ -1,0 +1,21 @@
+<div class="modal" [ngClass]="{ 'is-active': isModalActive }">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Atualize seu quadrinho</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <app-create-comic></app-create-comic>
+    </section>
+    <footer class="modal-card-foot f-justify-between">
+      <div>
+        <button class="button is-success">Save changes</button>
+        <button class="button" (click)="closeModal()">Cancel</button>
+      </div>
+      <button class="button is-danger" (deleteComic)="handleDelete()">
+        Delete Comic
+      </button>
+    </footer>
+  </div>
+</div>

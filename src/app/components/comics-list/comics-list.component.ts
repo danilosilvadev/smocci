@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { comicItem } from "../../models/comicItem";
-import { RouterModule } from "@angular/router";
+import { comicItem } from "../../models/comicItem.model";
 
 @Component({
   selector: "app-comics-list",

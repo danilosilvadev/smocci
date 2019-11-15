@@ -25,9 +25,9 @@
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "src/app/constants.scss",
               "node_modules/bulma/css/bulma.min.css",
-              "src/app/utils/scss/index.scss",
-              "src/app/constants.scss"
+              "src/app/utils/scss/index.scss"
             ],
             "scripts": []
           },
